@@ -1,0 +1,120 @@
+/* src/index.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles for the modern e-commerce store */
+
+@layer base {
+  :root {
+    --color-primary: #10b981; /* Emerald 500 */
+    --color-secondary: #f59e0b; /* Amber 500 */
+    --color-background: #f9fafb; /* Gray 50 */
+    --color-text: #1f2937; /* Gray 800 */
+    --color-text-light: #4b5563; /* Gray 600 */
+    --color-border: #e5e7eb; /* Gray 200 */
+    --color-card-bg: #ffffff;
+    --color-error: #ef4444; /* Red 500 */
+    --color-success: #22c55e; /* Green 500 */
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-800 antialiased;
+    font-family: 'Inter', 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Custom font loading (if needed, otherwise Tailwind defaults to system fonts) */
+  /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap'); */
+}
+
+/* Custom components and utilities */
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-emerald-500 hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition duration-150 ease-in-out;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg shadow-sm text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition duration-150 ease-in-out;
+  }
+
+  .card {
+    @apply bg-white shadow-xl rounded-xl p-6 transition duration-300 ease-in-out hover:shadow-2xl border border-gray-100;
+  }
+
+  .input-field {
+    @apply block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-emerald-500 focus:border-emerald-500 sm:text-sm transition duration-150 ease-in-out;
+  }
+
+  .section-title {
+    @apply text-3xl font-extrabold text-gray-900 mb-8 border-b-2 border-emerald-500 pb-2;
+  }
+
+  .badge-primary {
+    @apply inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-emerald-100 text-emerald-800;
+  }
+
+  .badge-sale {
+    @apply inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-red-500 text-white shadow-md;
+  }
+}
+
+/* Utility overrides and additions */
+
+@layer utilities {
+  /* Custom scrollbar for better aesthetics (optional, but modern) */
+  /* Works primarily on Webkit browsers */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #d1d5db; /* Gray 300 */
+    border-radius: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #9ca3af; /* Gray 400 */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #f3f4f6; /* Gray 100 */
+  }
+
+  /* Apply custom scrollbar globally or to specific elements */
+  body {
+    @apply custom-scrollbar;
+  }
+}
+
+/* Animations (optional) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Ensure the main content area takes up available space */
+#root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
