@@ -1,0 +1,136 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/errors.html#errors_diagnostic_reports)
+.report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Directory for modules
+node_modules
+/node_modules
+
+# Build/dist folders
+dist
+dist-ssr
+build
+esnext
+out
+.next
+.nuxt
+.vercel
+.netlify
+/storybook-static
+
+# Dependency caches
+.npm
+.yarn-cache
+.yarn/cache
+.yarn/unplugged
+.yarn/build-in-cache
+.pnp.*
+
+# Optional npm cache
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.microbundle-cache
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+
+# Environment variables
+.env.*
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+.idea
+.DS_Store
+Thumbs.db
+
+# OS generated files
+.DS_Store
+ehthumbs.db
+Icon?
+*.swp
+
+# Vite-specific
+.vite
+/coverage
+
+# Cypress
+cypress/videos
+cypress/screenshots
+
+# Jest/Vitest coverage
+coverage
+
+# SvelteKit
+.svelte-kit
+
+# Next.js
+.next/
+
+# Nuxt
+.nuxt/
+
+# Gatsby
+.cache/
+public/
+
+# Storybook
+.storybook/
+
+# Temporary files
+tmp/
+*.tmp
+*.bak
+*.swp
+
+# Custom files for this project (e.g., local database files)
+db.json
+*.sqlite
+*.sqlite3
+/public/uploads
+/public/images/cache
+/public/files/cache
+/src/data/local-db.json
